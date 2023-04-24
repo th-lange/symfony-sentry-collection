@@ -1,0 +1,10 @@
+services:
+
+    App\Configurator\Sentry\SentryIgnoreFromDefinition:
+        arguments:
+            $options:
+                ignore_from_definition:
+                    -   level: warning
+                        logger: php
+                        subject_regex: '/^Deprecated/'
+                        file_regex: '/^\/vendor\//'
